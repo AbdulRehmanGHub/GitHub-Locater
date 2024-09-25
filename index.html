@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Profile App</title>
+    <title>GitHub Locater</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./github-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
-<h1>GitHub Profile Finder</h1>
+<body>
+    <div class="logo">
+        <img src="./github-logo.png" alt="logo">
+        <h1>Locater</h1>
+    </div>
+
 
     <form id="form" onsubmit="return formSubmit()">
         <input type="text" name="search" id="search" autofocus placeholder="Search a GitHub User Here" />
+        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
     </form>
-	
+
     <main id="main">
+
         <!-- <div class="card">
-            <div>
-                <img class="avatar" src="https://picsum.photo/200" alt="Pop" />
-            </div>
-            <div class="user-info">
-                <h2>Name</h2>
-                <p>Bio</p>
+                        <div class="user">
+                <div class="u_img">
+                    <img class="avatar" src="${data.avatar_url}" alt="profile-img" />
+                </div>
 
-                <ul class="info">
-                    <li>###<strong>Followers</strong></li>
-                    <li>###<strong>Following</strong></li>
-                    <li>###<strong>Repos</strong></li>
-                </ul>
+                <div class="u_info">
+                    <h2>${data.name}</h2>
+                    <p>${data.bio}</p>
 
-                <div id="repos">
-                    <a class="repo" href="#" target="_blank">Repo 1</a>
-                    <a class="repo" href="#" target="_blank">Repo 2</a>
-                    <a class="repo" href="#" target="_blank">Repo 3</a>
+                    <ul class="info">
+                        <li><strong>Followers: </strong> <span class="follow"> &emsp; ${data.followers}</span></li>
+                        <li><strong>Following: </strong> <span class="follow"> &emsp; ${data.following}</span></li>
+                    </ul>
                 </div>
             </div>
+
+            <div class='repository_container'>
+                <ul class="repo_info">
+                    <li><strong class="repo-heading">Public Repositories: </strong> <span class="pubrepos"> &emsp; ${data.public_repos}</span></li>
+                </ul>
+            </div>
         </div> -->
+
     </main>
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
